@@ -24,9 +24,9 @@ def main(file_path: str):
     processor.fill_in_missing_with_median('time_spent_seconds')
 
     # Save plots
-    processor.store_plot(processor.get_boxplot('purchase'), 'boxplot_purchase.png')
-    fig = processor.plot_and_save_histograms(['purchase', 'time_spent_seconds'])
-    fig.savefig('histograms.png')
+  #  processor.store_plot(processor.get_boxplot('purchase'), 'boxplot_purchase.png')
+  #  fig = processor.plot_and_save_histograms(['purchase', 'time_spent_seconds'])
+  #  fig.savefig('histograms.png')
 
     # Connect to the database and insert data
     db = DatabaseConnection()
@@ -52,11 +52,11 @@ def main(file_path: str):
     print("Data processed and stored successfully")
 
 if __name__ == "__main__":
-    import sys
-    if len(sys.argv) != 2:
-        print("Usage: python main.py <path_to_csv_file>")
-        sys.exit(1)
+ #   import sys
+  #  if len(sys.argv) != 2:
+   #     print("Usage: python main.py <path_to_csv_file>")
+    #    sys.exit(1)
     
-    file_path = "../data/dataset.csv"
+    file_path = "../dataset.csv"
     main(file_path)
 

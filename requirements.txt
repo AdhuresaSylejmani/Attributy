@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+pandas
+sqlalchemy
+psycopg2-binary
+scikit-learn
+seaborn
+matplotlib
+alembic
+notebook
+matplotlib
+pandas
+pandas
+psycopg2-binary
+python-dotenv
+matplotlib

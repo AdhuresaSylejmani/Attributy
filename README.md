@@ -86,6 +86,7 @@ This application processes CSV data, performs basic data analysis and manipulati
 2. **Run the FastAPI server:**
 
     ```sh
+    cd src
     uvicorn api:app --host 127.0.0.1 --port 8000 --reload    
     ```
 

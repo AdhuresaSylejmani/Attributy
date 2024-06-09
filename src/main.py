@@ -9,6 +9,18 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def main(file_path: str):
+    """
+    Main function to load, process, and store CSV data.
+
+    Parameters
+    ----------
+    file_path : str
+        The path to the CSV file to be processed.
+
+    Returns
+    -------
+    None
+    """
     # Load the CSV data
     reader = CSVReader(file_path)
     reader.load_data()
@@ -23,10 +35,10 @@ def main(file_path: str):
     processor.add_85_percentile_nationality()
     processor.fill_in_missing_with_median('time_spent_seconds')
 
-    # Save plots
-  #  processor.store_plot(processor.get_boxplot('purchase'), 'boxplot_purchase.png')
-  #  fig = processor.plot_and_save_histograms(['purchase', 'time_spent_seconds'])
-  #  fig.savefig('histograms.png')
+    # Save plots (commented out)
+    # processor.store_plot(processor.get_boxplot('purchase'), 'boxplot_purchase.png')
+    # fig = processor.plot_and_save_histograms(['purchase', 'time_spent_seconds'])
+    # fig.savefig('histograms.png')
 
     # Connect to the database and insert data
     db = DatabaseConnection()
@@ -52,11 +64,16 @@ def main(file_path: str):
     print("Data processed and stored successfully")
 
 if __name__ == "__main__":
- #   import sys
-  #  if len(sys.argv) != 2:
-   #     print("Usage: python main.py <path_to_csv_file>")
-    #    sys.exit(1)
+    """
+    Executes the main function with the provided file path.
+    
+    Note: The command-line usage is currently commented out.
+    """
+    # Uncomment the below lines for command-line usage
+    # import sys
+    # if len(sys.argv) != 2:
+    #     print("Usage: python main.py <path_to_csv_file>")
+    #     sys.exit(1)
     
     file_path = "../dataset.csv"
     main(file_path)
-

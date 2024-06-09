@@ -31,7 +31,6 @@ This application processes CSV data, performs basic data analysis and manipulati
     python3 -m venv attributy_interview
     source ./attributy_interview/bin/activate
     pip install -r requirments.txt
-    pip install pytest
     ```
 
 3. **Set up environment variables:**
